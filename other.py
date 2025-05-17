@@ -4,7 +4,7 @@ from rdkit.Chem import Descriptors
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-df = pd.read_csv('/Users/diana/Desktop/RDKit/prep1.csv')
+df = pd.read_csv('prep1.csv')
 
 df = df.rename(columns={
     'Chromophore': 'Chromophore_SMILES',
