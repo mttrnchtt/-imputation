@@ -4,7 +4,7 @@ from rdkit import Chem
 def shorten_string(s, max_len=10):
     return s if len(s) <= max_len else s[:max_len] + '...'
 
-df = pd.read_csv('/Users/diana/Desktop/RDKit/prep1.csv')
+df = pd.read_csv('/prep1.csv')
 df['Molecule'] = df['Chromophore'].apply(lambda x: Chem.MolFromSmiles(str(x)))
 df.dropna(subset=['Molecule'], inplace=True)
 
