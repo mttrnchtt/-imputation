@@ -3,7 +3,7 @@ from rdkit import Chem
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-df = pd.read_csv('/Users/diana/Desktop/RDKit/prep1.csv')
+df = pd.read_csv('prep1.csv')
 df['Molecule'] = df['Chromophore'].apply(lambda x: Chem.MolFromSmiles(str(x)))
 df.dropna(subset=['Molecule'], inplace=True)
 
